@@ -5,6 +5,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* 
+html,
+body {
+  overflow-x: hidden;
+} */
 
 body {
   font-family: "Bai Jamjuree", sans-serif;
@@ -13,6 +18,7 @@ body {
 }
 .container {
   position: relative;
+  overflow: hidden;
 }
 section {
   margin-bottom: 10%;
@@ -59,14 +65,14 @@ h3 {
   box-shadow: 0px 2px 0px 1px hsl(233, 49%, 52%);
 }
 .green,
-.blue{
-    transition: background-color .4;
+.blue {
+  transition: background-color 0.4;
 }
-.green:hover{
-    background-color: hsl(171, 45%, 53%);
+.green:hover {
+  background-color: hsl(171, 45%, 53%);
 }
-.blue:hover{
-    background-color: hsl(234, 90%, 73%);
+.blue:hover {
+  background-color: hsl(234, 90%, 73%);
 }
 
 /* top */
@@ -144,156 +150,168 @@ h3 {
   align-items: center;
 }
 .faq img {
- width: 50px;
+  width: 50px;
 }
 .flex-faq {
-    text-align: left;
-    width: 50%;
+  text-align: left;
+  width: 50%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "a b c"
     "d e .";
-    cursor: pointer;
+  cursor: pointer;
 }
-.a { grid-area: a; }
-.b { grid-area: b; }
-.c { grid-area: c; }
-.d { grid-area: d; }
-.e { grid-area: e; }
-.flex-faq h4:hover{
-    color: hsl(171, 66%, 44%);
+.a {
+  grid-area: a;
 }
-.flex-icon{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.b {
+  grid-area: b;
 }
-.flex-icon img{
-    width: 30px;
-    margin-left: 10%;
-    cursor: pointer;
+.c {
+  grid-area: c;
 }
-.flex-icon img:hover{
-    filter: invert(52%) sepia(60%) saturate(431%) hue-rotate(121deg) brightness(98%) contrast(84%);
+.d {
+  grid-area: d;
+}
+.e {
+  grid-area: e;
+}
+.flex-faq h4:hover {
+  color: hsl(171, 66%, 44%);
+}
+.flex-icon {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.flex-icon img {
+  width: 30px;
+  margin-left: 10%;
+  cursor: pointer;
+}
+.flex-icon img:hover {
+  filter: invert(52%) sepia(60%) saturate(431%) hue-rotate(121deg)
+    brightness(98%) contrast(84%);
 }
 
 /* bg */
 .desktop,
-.mobile{
-    position: absolute;
-    top: 0;
-    left: 0;
+.mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.mobile{
-    display: none;
+
+.mobile {
+  display: none;
 }
 
 /* for mobile */
-@media (max-width:769px){
-    .desktop{
-        display: none;
-    }
-    .mobile{
-        display: block;
-    }
-    h1{
-        font-size: 200%;
-    }
-    .container {
-        padding-top: 15%;
-    }
-      section {
-        margin-bottom: 20%;
-      }
-      p {
-        font-size: 90%;
-        width: 100%;
-        padding: 2% 5%;
-      }
-      h2 {
-        font-size: 150%;
-        padding: 0 10%;
-      }
-      .btn {
-        width: 80%;
-        max-width: 300px;
-      }
-      .flex-c {
-          margin: 10% 0;
-        padding: 0;
-        flex-direction: column;
-      }
-      .com {
-        width: 80%;
-        margin: 0;
-      }
-      .col {
-          margin-top: 10%;
-        text-align: center;
-        margin-right: 0;
-      }
-      .col p {
-        margin-bottom: 10%;
-        width: fit-content;
-        font-size: 90%;
-      }
-      .device {
-        margin-top: 10%;
-        width: 100%;
-      }
-      .flex {
-        flex-direction: column;
-        align-items: center;
-      }
-      .icon {
-        margin: 10% 0 5% 0;
-        width: 60px;
-      }
-      .flex p {
-        margin: 0;
-        width: 100%;
-      }
-      .box {
-        width: 100%;
-        padding: 0 20px;
-      }
-      .flex-logo {
-        justify-content: center;
-        flex-direction: column;
-        margin-top: 20%;
-      }
-      .flex-logo img {
-          margin-bottom: 20%;
-      }
-      /* FAQ */
-      .faq {
-        position: relative;
-        flex-direction: column;
-        justify-content: center;
-        height: fit-content;
-      }
-      .faq img {
-          margin: 20% 0;
-       width: 50px;
-      }
-      .flex-faq {
-          text-align: center;
-          width: 100%;
-        display: block;
-      }
-      .flex-faq h4{
-          margin-bottom: 10%;
-      }
-      .flex-icon{
-          width: 100%;
-          justify-content: center;
-      }
-      .flex-icon img{
-          width: 30px;
-          margin: 10%;
-          cursor: pointer;
-      }
+@media (max-width: 769px) {
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  h1 {
+    font-size: 200%;
+  }
+  .container {
+    padding-top: 15%;
+  }
+  section {
+    margin-bottom: 20%;
+  }
+  p {
+    font-size: 90%;
+    width: 100%;
+    padding: 2% 5%;
+  }
+  h2 {
+    font-size: 150%;
+    padding: 0 10%;
+  }
+  .btn {
+    width: 80%;
+    max-width: 300px;
+  }
+  .flex-c {
+    margin: 10% 0;
+    padding: 0;
+    flex-direction: column;
+  }
+  .com {
+    width: 80%;
+    margin: 0;
+  }
+  .col {
+    margin-top: 10%;
+    text-align: center;
+    margin-right: 0;
+  }
+  .col p {
+    margin-bottom: 10%;
+    width: fit-content;
+    font-size: 90%;
+  }
+  .device {
+    margin-top: 10%;
+    width: 100%;
+  }
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .icon {
+    margin: 10% 0 5% 0;
+    width: 60px;
+  }
+  .flex p {
+    margin: 0;
+    width: 100%;
+  }
+  .box {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .flex-logo {
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20%;
+  }
+  .flex-logo img {
+    margin-bottom: 20%;
+  }
+  /* FAQ */
+  .faq {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+  }
+  .faq img {
+    margin: 20% 0;
+    width: 50px;
+  }
+  .flex-faq {
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+  .flex-faq h4 {
+    margin-bottom: 10%;
+  }
+  .flex-icon {
+    width: 100%;
+    justify-content: center;
+  }
+  .flex-icon img {
+    width: 30px;
+    margin: 10%;
+    cursor: pointer;
+  }
 }
